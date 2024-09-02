@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/script.js" defer></script>
+    <title>Jadwal Perkuliahan</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Jadwal Perkuliahan</h1>
+      <form id="scheduleForm">
+        <div class="form-group">
+          <label for="minggu">Minggu Ke:</label>
+          <input type="number" id="minggu" name="minggu" min="1" required />
+        </div>
+        <div class="form-group">
+          <label for="hari">Tanggal (Format: YYYY-MM-DD):</label>
+          <input type="date" id="hari" name="hari" required />
+        </div>
+        <div class="form-group">
+          <label for="matakuliah">Mata Kuliah:</label>
+          <select id="matakuliah" name="matakuliah" required>
+            <!-- Option will be added dynamically -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="waktu">Waktu (Format 24 Jam):</label>
+          <input type="time" id="waktu" name="waktu" required />
+        </div>
+        <div class="form-group">
+          <label for="sks">Jumlah SKS:</label>
+          <input type="number" id="sks" name="sks" required />
+        </div>
+        <div class="form-group">
+          <label for="pelaksanaan">Pelaksanaan:</label>
+          <select id="pelaksanaan" name="pelaksanaan" required>
+            <option value="Offline">Offline</option>
+            <option value="Online">Online</option>
+          </select>
+        </div>
+        <div class="form-group" id="tempatGroup">
+          <label for="tempat">Tempat:</label>
+          <select id="tempat" name="tempat" required>
+            <!-- Option will be added dynamically -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dosen">Dosen:</label>
+          <select id="dosen" name="dosen" required>
+            <!-- Option will be added dynamically -->
+          </select>
+        </div>
+        <button type="submit">Tampilkan Jadwal</button>
+      </form>
+      <div class="schedule" id="schedule">
+        <!-- Jadwal akan ditampilkan di sini -->
+      </div>
+      <div class="button-group">
+        <button id="copyButton">Salin Jadwal</button>
+      </div>
+    </div>
+  </body>
+</html>
