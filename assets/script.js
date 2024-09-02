@@ -1,4 +1,3 @@
-<script>
 const dosenPTIKC = [
   "AlifyaNFH, S.Pd.,M.Pd",
   "M. Syahid Nur Wahid, M.Pd",
@@ -65,15 +64,7 @@ function populateSelectOptions() {
 }
 
 function formatDateToDayMonthYear(dateString) {
-  const days = [
-    "Minggu",
-    "Senin",
-    "Selasa",
-    "Rabu",
-    "Kamis",
-    "Jumat",
-    "Sabtu",
-  ];
+  const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
   const months = [
     "Januari",
     "Februari",
@@ -178,13 +169,10 @@ document
     document.getElementById("copyButton").style.display = "inline-block"; // Show the copy button
   });
 
-document
-  .getElementById("copyButton")
-  .addEventListener("click", function () {
-    const scheduleContent = document.getElementById("schedule").innerText;
-    copyToClipboard(scheduleContent);
-  });
+document.getElementById("copyButton").addEventListener("click", function () {
+  const scheduleContent = document.getElementById("schedule").innerText;
+  copyToClipboard(scheduleContent);
+});
 
 // Populate the select options on page load
 populateSelectOptions();
-</script>
